@@ -24,14 +24,29 @@ public class Plansza {
         tablicaPionkow[wys][szer] = pionek;
     }
     public void movePionek(Pionki pionek, int x, int y){
-        delPionek();
-        pozX = x;
-        pozY = y;
-        tablicaPionkow[pozX][pozY] = pionek;
+
+        Pionki sprawdzenie = tablicaPionkow[x][y];
+     //tylko po skosie o 1
+     //     if (((x == prawoX+1) || (x == lewoX-1)) && ((y == prawoY+1) || (y == lewoY-1))){
+     //każdy kierunek o 1
+        if ((((x == pozX+1) || (x == pozX)) || ((x == pozX-1) || (x == pozX))) && (((y == pozY+1) || (y == pozY)) || ((y == pozY-1) || (y == pozY)))){
+            if (sprawdzenie == pionek) {
+                System.out.println("------------------------");
+                System.out.println("##### niedozwolony ruch");
+            }
+                delPionek();
+                pozX = x;
+                pozY = y;
+                tablicaPionkow[pozX][pozY] = pionek;
+            } else {
+            System.out.println();
+            System.out.println("------------------------");
+            System.out.println("##### niedozwolony ruch");
+        }
     }
     public void delPionek(){
         tablicaPionkow[pozX][pozY] = null;
     }
-}
+    }
 
 
