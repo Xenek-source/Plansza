@@ -27,7 +27,7 @@ public class Plansza {
 
         Pionki sprawdzenie = tablicaPionkow[x][y];
      //tylko po skosie o 1
-     //     if (((x == prawoX+1) || (x == lewoX-1)) && ((y == prawoY+1) || (y == lewoY-1))){
+     //     if (((x == pozX+1) || (x == pozX-1)) && ((y == pozY+1) || (y == pozY-1))){
      //każdy kierunek o 1
         if ((((x == pozX+1) || (x == pozX)) || ((x == pozX-1) || (x == pozX))) && (((y == pozY+1) || (y == pozY)) || ((y == pozY-1) || (y == pozY)))){
             if (sprawdzenie == pionek) {
